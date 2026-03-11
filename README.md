@@ -14,20 +14,6 @@
 
 ---
 
-## 📊 Benchmark e Performance
-
-Nossos rigorosos testes no subconjunto de avaliações do e-commerce brasileiro (B2W-Reviews) compararam as abordagens de **Extração de Embeddings com Random Forest** e **Fine-Tuning**. Foram avaliados 4 modelos principais:
-- **BERTugues** (`ricardoz/BERTugues-base-portuguese-cased`)
-- **BERTimbau Base**
-- **BERTimbau Large**
-- **mBERT** (Multilingual BERT)
-
-### Resultados Observados
-- **Alta Acurácia e F1-Score**: O modelo atinge performance competitiva frente às versões `Base` e `Large` do BERTimbau, e consistentemente supera o `mBERT` em tarefas focadas na linguagem nativa.
-- **Pooling Inteligente**: Nosso benchmark mediu a diferença entre `CLS pooling` e `Mean pooling`. O `Mean pooling` demonstrou-se mais expressivo para recuperar intenções semânticas em frases médias e longas em tarefas de extração pura e RAG.
-
----
-
 ## � Notebooks do Repositório
 
 O repositório conta com uma série de Jupyter Notebooks focados em demonstrar as capacidades e a avaliação do **BERTugues**:
