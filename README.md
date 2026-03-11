@@ -9,14 +9,14 @@
 ## 🚀 Por que usar o BERTugues?
 
 1. **Tokenização Eficiente:** Em comparações diretas no dataset ASSIN 2, o tokenizador do BERTugues apresenta uma taxa significativamente menor de fragmentação de sub-palavras (com redução dos fragmentos iniciados em `##`) em comparação ao `mBERT` e ao `BERTimbau`. Isso significa que o modelo precisa de menos tokens para representar as mesmas frases, aumentando o "espaço real" de contexto e diminuindo o custo computacional.
-2. **Ausência de Viés de Vocabulário Estrangeiro:** O vocabulário foi limpo para remover a imensa quantidade de caracteres cirílicos, asiáticos e símbolos não utilizados no português, tornando a matriz de embeddings muito mais enxuta.
+2. **Ausência de Viés de Vocabulário Estrangeiro:** O vocabulário foi limpo para remover caracteres asiáticos e símbolos não utilizados no português.
 3. **Versatilidade:** Ideal para Fine-Tuning de Classificação de Texto, RAG (Retrieval-Augmented Generation), Reconhecimento de Entidades Nomeadas (NER) e demais tarefas de NLP.
 
 ---
 
 ## 📊 Benchmark e Performance
 
-Nossos rigorosos testes no subconjunto de avaliações do e-commerce brasileiro (B2W-Reviews e Olist) compararam as abordagens de **Extração de Embeddings com Random Forest** e **Fine-Tuning**. Foram avaliados 4 modelos principais:
+Nossos rigorosos testes no subconjunto de avaliações do e-commerce brasileiro (B2W-Reviews) compararam as abordagens de **Extração de Embeddings com Random Forest** e **Fine-Tuning**. Foram avaliados 4 modelos principais:
 - **BERTugues** (`ricardoz/BERTugues-base-portuguese-cased`)
 - **BERTimbau Base**
 - **BERTimbau Large**
@@ -145,8 +145,6 @@ model = AutoModelForTokenClassification.from_pretrained(
 )
 ```
 
-
-
 ## 🛠️ Requisitos e Instalação
 
 ```bash
@@ -155,4 +153,6 @@ pip install transformers torch
 
 ## 🤝 Contribuições
 
-Este repositório contém os notebooks de exemplo, validação, criação do DataLoader e Fine-tuning usados na validação das capacidades do BERTugues comparado ao estado da arte do NLP em português brasileiro. Fique à vontade para submeter *issues* e *pull-requests* melhorando ou expandindo os benchmarks!
+Este repositório contém os notebooks de exemplo, validação, criação do DataLoader e Fine-tuning usados na validação das capacidades do BERTugues. Fique à vontade para submeter *pull-requests* melhorando ou expandindo os benchmarks!
+
+Escrito com ajuda de AI! ✨
